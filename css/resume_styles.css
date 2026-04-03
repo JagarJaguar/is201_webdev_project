@@ -1,0 +1,150 @@
+/* Base Page Styling */
+body {
+    background-color: #f4f4f9; /* Soft grey background so the white resume pops */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+/* Navigation & Back Button */
+.nav-container {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.back-btn:hover {
+    background-color: #555;
+}
+
+/* The PDF-like Resume Sheet */
+.resume-container {
+    background-color: #fff;
+    max-width: 800px; /* Standard letter-ish width */
+    margin: 0 auto;
+    padding: 60px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Gives it the paper drop-shadow */
+    border-radius: 2px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    border-bottom: 2px solid #222;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #111;
+}
+
+header .subtitle {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: #444;
+}
+
+header .contact-info {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Sections */
+.resume-section {
+    margin-bottom: 35px;
+}
+
+.resume-section h2 {
+    font-size: 1.3rem;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Jobs and Education */
+.job, .education-item {
+    margin-bottom: 25px;
+}
+
+.job h3, .education-item h3 {
+    margin: 0 0 2px 0;
+    font-size: 1.15rem;
+    color: #222;
+}
+
+.company-date, .university-date {
+    font-style: italic;
+    color: #666;
+    margin: 0 0 10px 0;
+    font-size: 0.95rem;
+}
+
+.job ul {
+    margin: 0;
+    padding-left: 25px;
+    color: #444;
+}
+
+.job ul li {
+    margin-bottom: 6px;
+}
+
+/* Skills Tags */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #f0f0f0;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Print Styles (Makes it look like a real document if they hit Ctrl+P) */
+@media print {
+    body {
+        background-color: #fff;
+        padding: 0;
+    }
+    
+    .nav-container {
+        display: none; /* Hides the back button on the printed page */
+    }
+    
+    .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+    }
+}
