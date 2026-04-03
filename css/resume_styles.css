@@ -1,6 +1,6 @@
 /* Base Page Styling */
 body {
-    background-color: #f4f4f9; /* Soft grey background so the white resume pops */
+    background-color: #f4f4f9;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
     margin: 0;
@@ -34,7 +34,7 @@ body {
 /* The PDF-like Resume Sheet */
 .resume-container {
     background-color: #fff;
-    max-width: 800px; /* Standard letter-ish width */
+    max-width: 800px; 
     margin: 0 auto;
     padding: 60px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08); /* Gives it the paper drop-shadow */
@@ -131,7 +131,6 @@ header .contact-info {
     font-weight: 500;
 }
 
-/* Print Styles (Makes it look like a real document if they hit Ctrl+P) */
 @media print {
     body {
         background-color: #fff;
@@ -139,7 +138,7 @@ header .contact-info {
     }
     
     .nav-container {
-        display: none; /* Hides the back button on the printed page */
+        display: none;
     }
     
     .resume-container {
